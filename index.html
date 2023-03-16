@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css"/>
+    
+    <title>Calculadora</title>
+</head>
+<!-- INICIO DO CORPO -->
+<body>
+    <!-- DIV PRINCIPAL INICIO -->
+    <div id="container">
+    <div>
+        <h1 class="title">Calculadora de Gorjetas</h1>
+    </div>
+    <div>
+        <!-- ABERTURA DO FORMULARIO PRINCIPAL -->
+        <form class="tipForms" id="tipsForm">
+            <!-- LABEL/CAMPO PARA O ID BILL LIGADO COM O INPUT  -->
+            <label for="bill">
+                  <p>Quanto ficou a conta?</p>
+            </label>
+            <p>
+              R$ <input type="number" placeholder="Digite o Valor" name="bill" id="bill" class="formImput" required>
+            </p>
+            <!-- FINAL DO CONJUNTO LABEL + INPUT BILL QUE ESCREVERIA O VALOR -->
+            <!-- INICIO DO LABEL DE AVALIAÇÃO DA QUALIDADE DO SERVIÇO -->
+            <label for="serviceQual">
+                <p>Como foi seu serviço?</p>
+            </label>
+            <p>
+                <select name="serviceQual" id="serviceQual" class="formSelect">
+                    <option disable selected> Escolha uma opção </option>
+                    <option value="0.3">30% - Incrivel</option>
+                    <option value="0.2">20% - Bom</option>
+                    <option value="0.15">15% - Aceitavel</option>
+                    <option value="0.1">10% - Ruim</option>
+                    <option value="0.05">05% - Péssimo</option>
+                </select>
+            </p>
+            <!-- FINAL DA AVALIAÇÃO DO SERVIÇO JUNÇÃO DO LABEL COM O SELECT+ OPTION PARA SELECIONAR DE ACORDO -->
+            <!-- INICIO DO LABEL DE ESPECIFICAR QUANTAS PESSOAS DIVIDIRÃO A CONTA -->
+            <label for="people">
+                <p>Quantas pessoas vão dividir a conta?</p>
+            </label>
+            <p>
+                <input type="number" placeholder="1" name="people" id="people" class="formImput" required> Pessoa(s)
+            </p>
+            <!-- FINAL DO LABEL DE SELEÇÃO DE QUANTAS PESSOAS COM O INPUT NUMBER  -->
+            <!-- BUTTON DE CALCULAR -->
+            <button type="submit" class="formSubmit">Calcular</button>
+        </form>
+        <!-- FECHAMENTO DO FORMULARIO PRINCIPAL -->
+    </div>
+    <div id="totalTip">
+    Gorjeta total:
+    R$<span id="tip">0.00</span>
+    <span id="each">Cada</span>
+    </div>
+</div>
+<!-- DIV PRINCIPAL FIM -->
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+<!-- FIM DO CORPO -->
+</html>
